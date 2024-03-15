@@ -1,0 +1,13 @@
+àáâãçèéêìíîòóôõùúû
+/^[a-zàáâãçèéêìíîòóôõùúû]$/im
+
+id(foreing key) nos estagiarios ligando id dos adms
+
+tabela adm  id(primary key ) email (unique) nome 
+
+sessao_start 
+guardar id na sessao 
+isset verificar se id esta na sessao
+header('Location','rota.php' )
+
+

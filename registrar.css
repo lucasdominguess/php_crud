@@ -1,0 +1,542 @@
+@charset "UTF-8";
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+/* ELEMENTOS DA INTERFACE */
+
+
+body {
+    /* background-color: #ff0000;
+    background-image: linear-gradient(180deg,#0d00ff9b, #ff00eea5);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    margin-top: 100px; */
+    height: auto;
+    min-height: 1080px;
+    max-height: max-content; 
+    width: auto;
+    min-width: auto;
+    max-width: auto;
+    --x: calc(var(--posX, 0) * 1px);
+    --y: calc(var(--posY, 0) * 1px);
+    background-image: 
+    linear-gradient(10deg, rgb(6, 100, 165), rgb(6, 100, 165)), 
+    radial-gradient(100% 100% at calc(100% + var(--x)) calc( 0% + var(--y)), rgb(6, 100, 165), rgb(6, 100, 165)), 
+    radial-gradient(100% 100% at calc(100% - var(--x)) calc( 0% - var(--y)), rgb(255, 255, 255), rgb(255, 255, 255)), 
+    radial-gradient(100% 100% at calc(100% + var(--x)) calc( 0% + var(--y)), rgb(255, 255, 255), rgb(6, 100, 165)), 
+    radial-gradient(100% 100% at calc(100% - var(--x)) calc( 0% - var(--y)), rgb(255, 255, 255), rgb(255, 255, 255)), 
+    linear-gradient(10deg, rgb(6, 100, 165), rgb(255, 255, 255));
+    background-blend-mode: overlay, overlay, difference, difference, difference, normal;
+    /* position: relative; */
+}
+
+div#bemvindo {
+    text-align: center !important;
+    margin-top: 25px;
+    color: white;
+    animation: rainbow-color 10s linear infinite;
+    position: relative;
+    left: 1500px;
+}
+
+#form_cad {
+    width: 300px;
+    height: 100vh;
+    background-color: hsla(0, 0%, 0%, 0.523);
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: width 0.5s ease-in-out;
+    border-radius: 0;
+    color: white;
+  }
+
+#conteudo{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+div.dt-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+ul.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+div.dt-search {
+    margin: 10px;
+    margin-right: 1px;
+}
+
+thead{
+    text-align: center;
+}
+
+td{
+    text-align: center !important;
+    line-height: 50px !important;
+}
+
+table.table.dataTable.table-striped>tbody>tr:nth-of-type(2n+1)>*{
+    animation: rainbow-bg 2s linear infinite;
+}
+
+section#sessao_tabela {
+    background-color: rgb(255, 255, 255) !important;
+    color: rgb(0, 0, 0) !important;
+    width: 900px !important;
+    margin: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section#sessao_cadastro {
+    height: 370px;
+}
+
+section {
+    height: auto;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+header, main, article {
+    max-width: 700px;
+}
+
+header > h1 {
+    color: white;
+    text-shadow: 3px 3px 0px black;
+    text-align: center;
+}
+
+h1.h1s {
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+main, article {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.502);
+}
+
+h2, h3, h4 {
+    margin: 0 0 10px 0;
+}
+
+a {
+    color: #15142b;
+    background-color: rgba(55, 41, 145, 0.1);
+    padding: 0 3px;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: .5px dotted rgb(6, 100, 165);
+}
+
+a:hover {
+    color: rgb(6, 100, 165);
+    border-bottom: 1px solid rgb(6, 100, 165);
+}
+
+/* TABELAS E LISTAS */
+
+table {
+    min-width: 400px;
+    border-spacing: 0px;
+    border: 0.5px solid rgb(6, 100, 165);
+    margin: 10px auto;
+}
+
+table th {
+    background-color: rgb(6, 100, 165);
+    color: white;
+    padding: 5px;
+    text-align: left;
+}
+
+table td {
+    padding: 5px;
+}
+
+table tr {
+    background-color: rgba(6, 99, 165, 0.437);
+}
+
+table tr:nth-child(odd) {
+    background-color: rgba(6, 99, 165, 0.667);
+}
+
+table.divisao {
+    border: 1px solid white;
+}
+
+table.divisao td {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+table.divisao  tr:nth-child(1) td:nth-child(2) {
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+}
+
+table.divisao tr:nth-child(2) td:nth-child(2) {
+    border-left: 3px solid black;
+}
+
+table.divisao tr:nth-child(2) td:nth-child(1) {
+    text-decoration: underline;
+}
+
+ul > li::marker {
+    color: rgb(6, 100, 165);
+}
+
+/* ELEMENTOS DE FORMULÁRIO */
+
+form {
+    background-color: rgb(255, 0, 238);
+    padding: 15px;
+    border-radius: 10px;
+    width: 330px;
+}
+
+form label {
+    display: center;
+    width: fit-content;
+    font-size: 0.9em;
+    font-weight: 100;
+    animation: rainbow-bg 5s infinite;
+    padding: 3px 7px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    border-radius: 5px;
+}
+
+input[type=text], [type=number], select, input[type=date], input[type=date], input[type=datetime], input[type=email], input[type=month], input[type=password], input[type=range], input[type=tel], input[type=time], input[type=week] {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1em;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+  
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    font-size: 1em;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+input[type=reset] {
+    width: 100%;
+    background-color: #eb9903;
+    font-size: 1em;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=reset]:hover {
+    background-color: #c27013;
+}
+
+input[type=button], button {
+    width: 100%;
+    background-color: rgb(6, 100, 165);
+    font-size: 1em;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=button]:hover, button:hover {
+    background-color: #291f6c;
+}
+
+fieldset {
+    border: 0.5px dotted rgb(6, 100, 165);
+}
+
+fieldset > legend {
+    font-size: 0.8em;
+    font-weight: 100;
+    background-color: rgba(55, 41, 145, 0.2);
+    padding: 3px 7px;
+    border-radius: 5px;
+}
+
+#btn_cadastrar:hover{
+    background: rgb(0,212,255);
+    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(0,194,209,1) 14%, rgba(102,0,255,1) 72%);
+    letter-spacing: 1px;
+    transition: 0.6s;
+}
+
+@keyframes rainbow-bg{
+    100%,0%{
+        background-color: rgb(255,0,0, 0.09);
+    }
+    4%{
+        background-color: rgb(255,64,0, 0.09);
+    }
+    8%{
+        background-color: rgb(255,128,0, 0.09);
+    }
+    12%{
+        background-color: rgb(255,191,0, 0.09);
+    }
+    16%{
+        background-color: rgb(255,255,0, 0.09);
+    }
+    20%{
+        background-color: rgb(191,255,0, 0.09);
+    }
+    24%{
+        background-color: rgb(128,255,0, 0.09);
+    }
+    28%{
+        background-color: rgb(64,255,0, 0.09);
+    }
+    32%{
+        background-color: rgb(0, 255, 0, 0.09);
+    }
+    36%{
+        background-color: rgb(0, 255, 64, 0.09);
+    }
+    40%{
+        background-color: rgb(0, 255, 128, 0.09);
+    }
+    44%{
+        background-color: rgb(0, 255, 191, 0.09);
+    }
+    48%{
+        background-color: rgb(0, 255, 255, 0.09);
+    }
+    52%{
+        background-color: rgb(0, 191, 255, 0.09);
+    }
+    56%{
+        background-color: rgb(0, 128, 255, 0.09);
+    }
+    60%{
+        background-color: rgb(0, 64, 255, 0.09);
+    }
+    64%{
+        background-color: rgb(0, 0, 255, 0.09);
+    }
+    68%{
+        background-color: rgb(64, 0, 255, 0.09);
+    }
+    72%{
+        background-color: rgb(128, 0, 255, 0.09);
+    }
+    76%{
+        background-color: rgb(191, 0, 255, 0.09);
+    }
+    80%{
+        background-color: rgb(255, 0, 255, 0.09);
+    }
+    84%{
+        background-color: rgb(255, 0, 191, 0.09);
+    }
+    88%{
+        background-color: rgb(255, 0, 128, 0.09);
+    }
+    92%{
+        background-color: rgb(255, 0, 64, 0.09);
+    }
+    96%{
+        background-color: rgb(255, 0, 32, 0.09);
+    }
+  }
+
+@keyframes rainbow-bg2{
+    100%,0%{
+        background-color: rgb(255,0,0);
+    }
+    4%{
+        background-color: rgb(255,64,0);
+    }
+    8%{
+        background-color: rgb(255,128,0);
+    }
+    12%{
+        background-color: rgb(255,191,0);
+    }
+    16%{
+        background-color: rgb(255,255,0);
+    }
+    20%{
+        background-color: rgb(191,255,0);
+    }
+    24%{
+        background-color: rgb(128,255,0);
+    }
+    28%{
+        background-color: rgb(64,255,0);
+    }
+    32%{
+        background-color: rgb(0, 255, 0);
+    }
+    36%{
+        background-color: rgb(0, 255, 64);
+    }
+    40%{
+        background-color: rgb(0, 255, 128);
+    }
+    44%{
+        background-color: rgb(0, 255, 191);
+    }
+    48%{
+        background-color: rgb(0, 255, 255);
+    }
+    52%{
+        background-color: rgb(0, 191, 255);
+    }
+    56%{
+        background-color: rgb(0, 128, 255);
+    }
+    60%{
+        background-color: rgb(0, 64, 255);
+    }
+    64%{
+        background-color: rgb(0, 0, 255);
+    }
+    68%{
+        background-color: rgb(64, 0, 255);
+    }
+    72%{
+        background-color: rgb(128, 0, 255);
+    }
+    76%{
+        background-color: rgb(191, 0, 255);
+    }
+    80%{
+        background-color: rgb(255, 0, 255);
+    }
+    84%{
+        background-color: rgb(255, 0, 191);
+    }
+    88%{
+        background-color: rgb(255, 0, 128);
+    }
+    92%{
+        background-color: rgb(255, 0, 64);
+    }
+    96%{
+        background-color: rgb(255, 0, 32);
+    }
+  }
+
+@keyframes rainbow-color{
+    100%,0%{
+        color: rgb(255,0,0);
+    }
+    4%{
+        color: rgb(255,64,0);
+    }
+    8%{
+        color: rgb(255,128,0);
+    }
+    12%{
+        color: rgb(255,191,0);
+    }
+    16%{
+        color: rgb(255,255,0);
+    }
+    20%{
+        color: rgb(191,255,0);
+    }
+    24%{
+        color: rgb(128,255,0);
+    }
+    28%{
+        color: rgb(64,255,0);
+    }
+    32%{
+        color: rgb(0, 255, 0);
+    }
+    36%{
+        color: rgb(0, 255, 64);
+    }
+    40%{
+        color: rgb(0, 255, 128);
+    }
+    44%{
+        color: rgb(0, 255, 191);
+    }
+    48%{
+        color: rgb(0, 255, 255);
+    }
+    52%{
+        color: rgb(0, 191, 255);
+    }
+    56%{
+        color: rgb(0, 128, 255);
+    }
+    60%{
+        color: rgb(0, 64, 255);
+    }
+    64%{
+        color: rgb(0, 0, 255);
+    }
+    68%{
+        color: rgb(64, 0, 255);
+    }
+    72%{
+        color: rgb(128, 0, 255);
+    }
+    76%{
+        color: rgb(191, 0, 255);
+    }
+    80%{
+        color: rgb(255, 0, 255);
+    }
+    84%{
+        color: rgb(255, 0, 191);
+    }
+    88%{
+        color: rgb(255, 0, 128);
+    }
+    92%{
+        color: rgb(255, 0, 64);
+    }
+    96%{
+        color: rgb(255, 0, 32);
+    }
+  }
