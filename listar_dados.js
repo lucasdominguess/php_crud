@@ -47,9 +47,12 @@ function tH(keys) {
     
             $(table1).append(thead) ;
             $(table1).append(tbody) ;
+
             $(h1).addClass('h1s'); 
             $('th').addClass('labelPerso'); 
-            $(table1).addClass('table table-striped')
+            $(table1).addClass('table table-striped table-hover table-responsive-sm  container')
+            // $(table1).css('wigth','100%')
+           
             $(tbody).addClass('tbody');
            
          
@@ -123,17 +126,20 @@ $(document).ready(async ()=>{
           buttons: [
           'copy', 'csv', 'excel'
         ],
-        responsive: true,  
+        responsive: true,
         columnDefs: [
-          { target: 0, visible: false, searchable: false},
-          { responsivePriority: 1, targets: 1 },
-          { responsivePriority: 2, targets: 2 },
-          { responsivePriority: 3, targets: 3 }
+          { target: [0,3], visible: false, searchable: false},
+          { title: 'Nome', targets: 1 },
+          { title: 'Data de Nascimento', targets: 2 },
+          { className: "dt-head-center", targets: [1,2,4,5] },
+          
       ],
       initComplete: function () {
-        $('.dt-buttons').removeClass('flex-wrap');
+        $('.dt-buttons').removeClass('btn-group');
+        $('.dt-buttons').addClass('d-flex');
       }
       })
+
       });
 
 

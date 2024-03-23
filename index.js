@@ -1,4 +1,8 @@
 
+// document.querySelector('html').setAttribute(
+//   'data-bs-theme',
+//   window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
+// );
 
   
   //Enviando Formulario para o Backend

@@ -1,14 +1,20 @@
-// function Cadastrar(key) { 
+function Cadastrar(key) { 
    
-//     // $("#myModal").show(1000)
-//     $("#title-cad").text('Cadastrar')
-//     // limparCampos() 
-//   }
+    $("#myModal").show(1000)
+    $("#title_h3").text('Cadastrar')
+    limparCampos() 
+  }
+  function limparCampos(){ 
+    $('#id').val('')
+    $('#nome').val('')
+    $('#data').val('')
+   
+}
   //Criando Modal & dados para alterar/cadastrar na table
 function createModal(key) {
     let keys = Object.keys(key)
     // console.log(keys)
-
+    $("#myModal").fadeToggle(1000)
     $('#title_h3').text('Editar Cadastro')
 
 // valores nos Inputs
@@ -34,25 +40,46 @@ async function btn_editar(key) {
 }
 
 // // Eventos de botoes
-  
-$('#btn_cadastrar').on('click', async ()=> {
+$("#btn_cadastrar").click(function(){
+  Cadastrar();
+ 
+
+}); 
+// botoes modal 
+$('#btn_enviarCad').on('click', async ()=> {
     let v_form = new FormData(document.getElementById('form_cad')) 
 
     enviar(v_form)
-  })
-
-
-// $("#enviar").click(function(){
-//     let v_form = new FormData(document.getElementById('form_edit')) 
-//    enviar(v_form); 
   
-// });
-// // botoes modal 
-// $("#fechar").click(function(){
-//     $("#myModal2").hide();
-//     // sair();
-// }) 
-// $("#btn_close").click(function(){
-//     $("#myModal2").hide();
-//     // sair();
-// })
+
+  })
+$("#fechar").click(function(){
+    $("#myModal").hide();
+    // sair();
+}) 
+$("#btn_close").click(function(){
+    $("#myModal").hide();
+  //  sair();
+})
+
+function sair() {
+  Swal.fire({ 
+  title: 'Deseja realmente sair? Dados serão Perdidos! ',
+  showDenyButton: true,            
+  confirmButtonText: "Sim",
+  denyButtonText: `Não`,
+  icon : 'question',
+  
+
+  }).then((result) => {
+ 
+  if (result.isConfirmed) {  
+ 
+      $("#myModal").fadeToggle('slow');
+   
+    // Swal.fire(`O ID do paciente é ${button.id}`, "", "info");
+  } else if (result.isDenied) {
+    // Swal.fire("OK!");
+    
+  }
+})}
