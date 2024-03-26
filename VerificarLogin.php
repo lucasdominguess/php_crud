@@ -1,6 +1,11 @@
-<?php 
+<?php
+
+use App\classes\Token;
 
 require_once 'Sql.php' ; 
+require_once "./logs/SalvarLogs.php"; 
+require_once "./app/classes/Token.php";
+
 
 
 class VerificarLogin { 
@@ -42,13 +47,21 @@ class VerificarLogin {
     $_SESSION['id']= $retorno[0]['id_adm'];
     $_SESSION['nome']= $retorno[0]['nome'];
     $_SESSION['sessao'] = new DateTime('now', new DateTimeZone('America/Sao_Paulo'));
-    $_SESSION['tempo30'] = $ver = date_add($_SESSION['sessao'],date_interval_create_from_date_string('+30 minutes'));
-
-
-    // $addtime = date_add($_SESSION['sessao'],date_interval_create_from_date_string('+30 minutes'));
-    // // $sessao_usuario = $addtime->format('H:i:s');
-    // $_SESSION['tempo30'] = $addtime->format('H:i:s');
+    $hr_arquivo =$_SESSION['sessao']->format('Y-m-d H:i:s');
+    // $_COOKIE['token'] = new Token($_SESSION['email']);
+    $_SESSION['token'] =  new Token($_SESSION['email']);
+    // $r= new SalvarLogs($_SESSION['token']);
 
     echo json_encode(['status'=>'ok','msg'=>'logado com sucesso','nome'=>$retorno[0]['nome']]);
+
+
+    $conteudo = array ($_SESSION['id_usuario'],$_SESSION['email'],$_SESSION['nome'],$hr_arquivo);
+
+    for ($i = 0 ; $i < count($conteudo);$i++){ 
+        $a1 = new SalvarLogs($conteudo[$i]) ; 
+    
+    }
+        $a2 = new SalvarLogs("\n");
+
 }    
 }

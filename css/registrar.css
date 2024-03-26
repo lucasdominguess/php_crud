@@ -16,13 +16,32 @@
     background-color: rgb(235, 233, 233);
     align-items: center;
     flex-direction: column;
-    gap: 20px;
+   /* gap: 10px; */
+}
+#header{ 
+    display: flex;
+    /* background-color: bisque; */
+    width: 100%;
+}
+#nav{ 
+    /* background-color: blue; */
+
+    padding: 10px 0px 10px 0px;
 }
 #sessao_adm{
-    background-color: rgb(240, 232, 232);
+    /* ackground-color: rgb(240, 232, 232); */
+    /* width: 30%;
+    height: 100%; */
     padding: 10px;
-    margin: 10px;
+    margin: 5px;
     border-radius: 7px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.4px);
+    -webkit-backdrop-filter: blur(9.4px);
+    border: 1px solid rgba(255, 255, 255, 1);
+   
+    /* justify-content: end;
+    align-items: stretch; */
 }
 #sessao_cadastro{ 
     /* background-color: rgb(255, 0, 225); */
@@ -38,7 +57,7 @@
 
 
     padding: 20px;
-    margin: 20px;
+    /* margin: 20px; */
     border-radius: 10px;
     /* border : 1px solid black */
 }

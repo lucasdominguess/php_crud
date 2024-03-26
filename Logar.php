@@ -2,6 +2,7 @@
 require 'ConsultaBanco.php';
 require_once 'Sql.php' ; 
 require 'VerificarLogin.php';
+require 'VerificarEmail.php';
 
 $email = $_POST['email']; 
 $senha = $_POST['senha']; 
@@ -9,7 +10,7 @@ $senha = $_POST['senha'];
 $db = new Sql(); 
 
 try{ 
-    
+    $ver_email = new VerificarEmail($email);
     $newEmail = new ConsultaBanco($email,$senha); 
 
     $login = new VerificarLogin($email,$senha);
