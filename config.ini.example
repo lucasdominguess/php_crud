@@ -1,0 +1,9 @@
+[database]
+host = *
+user = estag
+password = 123
+dbname = db_estagiarios
+
+
+; banco thiago        banco lucas 
+; data_nascimento = nascimento 
