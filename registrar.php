@@ -7,7 +7,7 @@ $nome = $_SESSION['nome'] ?? '';
 
 $nome = $_SESSION['nome'] ?? '';
 $logado = $_SESSION['sessao'] ?? 'ffff';
-$logado2= $_SESSION['sessao']->format('H:i:s');
+$logado2 = $_SESSION['sessao']->format('H:i:s');
 // $tempo = $_SESSION['tempo30'] ?? 'vazio' ;
 // $newtime = $tempo->format("H:i:s");
 
@@ -32,65 +32,67 @@ $logado2= $_SESSION['sessao']->format('H:i:s');
 <body class="body_bg">
 
     <section id="conteudo">
-        
-    <header id="header">
-        
-        <section id="sessao_adm" class="col-2">
+
+        <header id="header">
+
+            <section id="sessao_adm" class="col-2">
                 <div id="nomeAdm">
                     <div>
                         <h4>Bem-vindo</h4>
-                       <h3><?php echo $nome; ?> ! </h3> 
+                        <h3><?php echo $nome; ?> ! </h3>
                     </div>
                 </div>
                 <div id="tempo_sessao">
-                    <?php  echo $logado2;   ?> <br> 
+                    <?php echo $logado2;   ?> <br>
                 </div>
                 <div>
                     <button class="btn btn-danger">Sair</button>
                 </div>
-                    
-        </section>
-                
-        <section id="nav" class='col-sm-8'>
+
+            </section>
+
+            <section id="nav" class='col-sm-8'>
                 <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-            </a>
-            <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-            </li>
-            </ul>
-            <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-            </div>
-            </div>
-            </nav>
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Navbar</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Dropdown
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                                </li>
+                            </ul>
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
                 </div>
-             
-        </section>
+
+            </section>
         </header>
         <!-- Sessao cadastro -->
         <section id="sessao_cadastro">
@@ -100,10 +102,10 @@ $logado2= $_SESSION['sessao']->format('H:i:s');
         <section id="sessao_tabela" class="container col-sm-8">
 
             <div id="div_btncad">
-            <button id="btn_cadastrar" class="btn btn-primary" type="button">Cadastrar</button>
+                <button id="btn_cadastrar" class="btn btn-primary" type="button">Cadastrar</button>
 
             </div>
-            
+
         </section>
 
     </section>
@@ -111,43 +113,43 @@ $logado2= $_SESSION['sessao']->format('H:i:s');
     <!-- Sessao modal  -->
     <section id="sessao_modal">
 
-            <div class="modal bg-transp" id="myModal">
-                <div class="modal-dialog">
-                    <div class="modal-content">
+        <div class="modal bg-transp" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
 
-                   
-                        <div class="modal-header">
-                            <h4 class="modal-title">Insira os novos dados de edição</h4>
-                            <button id="btn_close" type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                        </div>
 
-                
-                        <div class="modal-body">
-                          
-                                    <form id="form_cad">
-                                    
-                        
-                                                    <h3 id="title_h3">Cadastro</h3>
-                                                    <input type="hidden" name="id" id="id">
-                                                    <label for="nome"><b>Nome:</b></label><br>
-                                                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome aqui!"><br><br>
-                                                    <label for="data_nascimento"><b>Data de Nascimento:</b></label><br>
-                                                    <input type="date" id="data" name="data_nascimento"><br><br>
-                                                   
-                                        
-                                    </form>
-                        </div>
+                    <div class="modal-header">
+                        <!-- <h4 class="modal-title">Insira os novos dados de edição</h4> -->
+                        <button id="btn_close" type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
 
-                        <div class="modal-footer">
-                            <button id="fechar" type="button" class="btn btn-danger">Fechar</button>
-                            <button id="btn_enviarCad" type="button" class="btn btn-success">Enviar</button>
-                        </div>
+
+                    <div class="modal-body">
+
+                        <form id="form_cad" class="">
+
+
+                            <h3 id="title_h3">Cadastro</h3>
+                            <input type="hidden" name="id" id="id"  class="form-control">
+                            <label for="nome" class="form-label"><b>Nome:</b></label><br>
+                            <input type="text" id="nome" name="nome" placeholder="Digite seu nome aqui!"  class="form-control"><br><br>
+                            <label for="data_nascimento" class="form-label"><b>Data de Nascimento:</b></label><br>
+                            <input type="date" id="data" name="data_nascimento"  class="form-control"><br><br>
+
+
+                        </form>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button id="fechar" type="button" class="btn btn-danger">Fechar</button>
+                        <button id="btn_enviarCad" type="button" class="btn btn-success">Enviar</button>
                     </div>
                 </div>
             </div>
-            
+        </div>
 
-        </section>
+
+    </section>
 
 
 </body>
@@ -163,6 +165,7 @@ $logado2= $_SESSION['sessao']->format('H:i:s');
 <script src="editar_dados.js"></script>
 <script src="enviar_dados.js"></script>
 <script src="Excluir_dados.js"></script>
+<script src="verifica_token.js"></script>
 <script src="index.js"></script>
 
 </html>

@@ -10,10 +10,13 @@ body {
     height: 100vh;
 }
 .body_bg{
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
     /* min-height: 1080px;
     max-height: max-content;  */
     background: linear-gradient(150deg, #0664a5, #000000, #0664a5, #000000, #0664a5);
-    background-size: 1000% 1000%;
+    background-size: 100% 1000%;
     -webkit-animation: AnimacaoGradient 5s linear infinite;
     -moz-animation: AnimacaoGradient 5s linear infinite;
     animation: AnimacaoGradient 5s linear infinite;
@@ -26,14 +29,16 @@ body {
 }
 
  #login{
+   
     padding: 15px;
-    border-radius: 10px;
-    width: 100%;
+    border-radius: 5px;
+    min-width: 350px;
     height: auto;
    
     margin-bottom: 0px;
     margin-left: auto;
     margin-right: auto;
+   
 }
 
 
@@ -66,8 +71,9 @@ body {
     }
 
 #btn_entrar:hover{
-    background: rgb(16,235,94);
-    background: linear-gradient(42deg, rgba(16, 235, 93, 0.459) 16%, rgba(0, 213, 255, 0.541) 74%);
+    background: rgba(16, 235, 93, 0.276);
+    background: linear-gradient(42deg, rgba(3, 247, 162, 0.713) 16%, rgba(0, 213, 255, 0.541) 74%);
+   
 }
 #h3login{ 
     text-align: center;
@@ -75,27 +81,34 @@ body {
     font-family: "Poppins", sans-serif;
 }
 #sessao_login{
+    height: 800px;
+ 
    display: flex;
    justify-content: center;
-   align-items: start;
+   align-items: center;
+   flex-direction: column;
 }
 
 .conteudo{ 
     background-color: white;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 3px;
+    
 }
 #div-img{
     display: flex;
-    justify-content: start;
-    align-items: start; 
-   
-;
+    justify-content: center;
+    align-items: start;
+  
+    height: auto;
+    width: 100%;
     
 }
 #img { 
-    width: 100%;
+    
     position: absolute;
+    
+    height: 800px;
     
 }
 #title_login{ 

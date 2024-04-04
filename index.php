@@ -21,7 +21,7 @@
         
     <!-- Sessao cadastro -->
     <section id="sessao_login" class="container-fluid">
-            <div id="div-img"> <img id="img" class="opacity-50" src="img.svg" alt="">
+            <div id="div-img"> <img id="img" class="opacity-50" src="img2.svg" alt="">
             </div>
             <div class="container" id="login">
 
